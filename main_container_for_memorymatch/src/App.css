@@ -140,9 +140,10 @@ main {
   display: grid;
   gap: 12px;
   margin: 0 auto;
-  max-width: 100%;
+  max-width: 600px;
   width: 100%;
   min-height: 500px;
+  padding: 20px;
 }
 
 .grid-4 {

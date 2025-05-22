@@ -75,3 +75,4 @@ src/App.js
   Line 30:6:  React Hook useEffect has missing dependencies: 'cards.length', 'gameStarted', and 'initializeGame'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
 
 webpack compiled with 1 warning
+Compiling...
