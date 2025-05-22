@@ -20,6 +20,14 @@ function App() {
   // Game configuration
   const cardValues = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
   const gridSize = 4; // 4x4 grid (16 cards)
+
+  // Initialize game on component mount
+  useEffect(() => {
+    // Auto-initialize game for development/testing
+    if (cards.length === 0) {
+      initializeGame();
+    }
+  }, []);
   
   /**
    * Initialize the game board by creating pairs of cards and shuffling them
