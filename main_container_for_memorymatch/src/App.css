@@ -157,6 +157,15 @@ main {
     gap: 8px;
   }
   
+  .memory-card {
+    height: 80px;
+    width: 60px;
+  }
+
+  .card-inner {
+    min-height: 80px;
+  }
+  
   .title {
     font-size: 2rem;
   }
