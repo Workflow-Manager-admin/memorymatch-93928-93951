@@ -17,8 +17,8 @@ function App() {
   const [gameStarted, setGameStarted] = useState(false);
   const [gameCompleted, setGameCompleted] = useState(false);
   
-  // Game configuration
-  const cardValues = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+  // Game configuration - using emojis instead of letters for a more fun experience
+  const cardValues = ['🦄', '🌈', '🍉', '🎮', '🚀', '🌮', '🐱', '🎨'];
   const gridSize = 4; // 4x4 grid (16 cards)
 
   // Initialize game on component mount
