@@ -175,20 +175,28 @@ main {
   .grid-4 {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    gap: 8px;
+    gap: 10px;
   }
   
   .memory-card {
-    height: 80px;
-    width: 60px;
+    height: 90px;
+    width: 70px;
   }
 
   .card-inner {
-    min-height: 80px;
+    min-height: 90px;
   }
   
   .title {
     font-size: 2rem;
+  }
+  
+  .card-emoji {
+    font-size: 2.5rem;
+  }
+  
+  .game-board {
+    padding: 15px;
   }
 }
 
