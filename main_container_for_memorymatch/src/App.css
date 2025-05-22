@@ -4,9 +4,13 @@
   --text-color: #ffffff;
   --text-secondary: rgba(255, 255, 255, 0.7);
   --border-color: rgba(255, 255, 255, 0.1);
-  --card-back: #2C2C2C;
-  --card-front: #3E3E3E;
-  --card-matched: #2E5A35;
+  --card-back: #354B9C;
+  --card-back-hover: #4A60B0;
+  --card-front: #5D3FD3;
+  --card-front-hover: #6F51E5;
+  --card-matched: #30BD5D;
+  --card-matched-hover: #42CF6F;
+  --card-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 body {
