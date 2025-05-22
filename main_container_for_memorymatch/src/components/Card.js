@@ -23,12 +23,11 @@ const Card = ({ id, value, isFlipped, isMatched, onClick }) => {
       <div className="card-inner">
         <div className="card-back">
           <div className="card-back-content">
-            <span className="logo-symbol">*</span>
+            <span className="card-symbol">?</span>
           </div>
         </div>
         <div className="card-front">
-          {/* In future versions, this could be an image or icon */}
-          <div className="card-value">{value}</div>
+          <div className="card-emoji">{value}</div>
         </div>
       </div>
     </div>
