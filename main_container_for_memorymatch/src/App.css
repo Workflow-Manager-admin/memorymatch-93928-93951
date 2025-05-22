@@ -17,6 +17,8 @@ body {
   margin: 0;
   font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
   background-color: var(--kavia-dark);
+  background-image: radial-gradient(circle at top right, #2E1760 0%, var(--kavia-dark) 70%);
+  min-height: 100vh;
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
