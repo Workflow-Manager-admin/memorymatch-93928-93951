@@ -24,10 +24,10 @@ function App() {
   // Initialize game on component mount
   useEffect(() => {
     // Auto-initialize game for development/testing
-    if (cards.length === 0) {
+    if (!gameStarted && cards.length === 0) {
       initializeGame();
     }
-  }, []);
+  }, []); // Empty dependency array ensures this runs only once on mount
   
   /**
    * Initialize the game board by creating pairs of cards and shuffling them
