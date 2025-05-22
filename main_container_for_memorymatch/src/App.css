@@ -183,19 +183,25 @@ main {
   perspective: 1000px;
   cursor: pointer;
   user-select: none;
-  height: 100px;
-  width: 75px;
+  height: 120px;
+  width: 90px;
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+.memory-card:hover:not(.flipped):not(.matched) {
+  transform: translateY(-5px);
 }
 
 .card-inner {
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.6s;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transform-style: preserve-3d;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  min-height: 100px;
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  min-height: 120px;
 }
 
 .memory-card.flipped .card-inner {
@@ -209,34 +215,70 @@ main {
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  border-radius: 8px;
+  border-radius: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
 
 .card-back {
   background-color: var(--card-back);
-  border: 2px solid var(--border-color);
+  border: 3px solid var(--border-color);
+}
+
+.memory-card:hover:not(.flipped):not(.matched) .card-back {
+  background-color: var(--card-back-hover);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 .card-back-content {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  animation: pulse 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes pulse {
+  from { opacity: 0.7; transform: scale(1); }
+  to { opacity: 1; transform: scale(1.1); }
+}
+
+.card-symbol {
+  font-size: 2.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: bold;
 }
 
 .card-front {
   background-color: var(--card-front);
   transform: rotateY(180deg);
-  border: 2px solid var(--kavia-orange);
+  border: 3px solid var(--kavia-orange);
 }
 
-.card-value {
-  font-size: 2rem;
-  font-weight: bold;
+.card-emoji {
+  font-size: 3rem;
+  animation: popIn 0.5s ease-out forwards;
+}
+
+@keyframes popIn {
+  0% { transform: scale(0); opacity: 0; }
+  70% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
 }
 
 .memory-card.matched .card-front {
   background-color: var(--card-matched);
+  animation: match-success 0.5s ease-in-out;
+}
+
+@keyframes match-success {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.memory-card.matched:hover .card-front {
+  background-color: var(--card-matched-hover);
 }
 
 .reset-button {
