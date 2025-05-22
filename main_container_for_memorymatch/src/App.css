@@ -168,6 +168,8 @@ main {
   perspective: 1000px;
   cursor: pointer;
   user-select: none;
+  height: 100px;
+  width: 75px;
 }
 
 .card-inner {
