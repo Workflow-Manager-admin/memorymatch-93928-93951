@@ -180,6 +180,7 @@ main {
   transform-style: preserve-3d;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  min-height: 100px;
 }
 
 .memory-card.flipped .card-inner {
