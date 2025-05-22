@@ -1,0 +1,4 @@
+{
+    "command": "npm run test",
+    "working_directory": "/home/kavia/workspace/code-generation/memorymatch-93928-93951/main_container_for_memorymatch"
+}
